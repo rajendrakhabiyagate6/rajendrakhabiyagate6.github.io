@@ -57,7 +57,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', function(e) {
   console.log('[Service Worker] Fetch', e.request.url);
-  var dataUrl = 'http://10.1.0.139:3000/api/';
+  var dataUrl = 'https://10.1.0.139:3000/api/';
   
   if (e.request.url.indexOf(dataUrl) > -1) {
     /*
