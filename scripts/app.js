@@ -112,7 +112,7 @@
     };
     
     app.getProducts = function() {
-        var url = 'https://10.1.0.139:3000/api/common/product_list?page=' + app.page;
+        var url = 'http://10.1.0.139:3000/api/common/product_list?page=' + app.page;
         if ('caches' in window) {
             /*
              * Check if the service worker has already cached this data
