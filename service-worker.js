@@ -16,15 +16,15 @@ var dataCacheName = 'ecommerce-data-v1';
 var cacheName = 'ecommerce-cache-v1';
 var filesToCache = [
   '/',
-  'index.html',
-  'scripts/app.js',
-  //'scripts/bootstrap.min.js',
-  //'scripts/jquery.min.js',
-  'styles/style.css',
-  'styles/bootstrap.min.css',
-  'styles/font-awesome.min.css',
-  'styles/responsive.css',
-  'images/logo.png'
+  '/index.html',
+  '/scripts/app.js',
+  //'/scripts/bootstrap.min.js',
+  //'/scripts/jquery.min.js',
+  '/styles/style.css',
+  '/styles/bootstrap.min.css',
+  '/styles/font-awesome.min.css',
+  '/styles/responsive.css',
+  '/images/logo.png'
   
 ];
 
