@@ -105,7 +105,9 @@
             app.dummyIMageCount = app.dummyIMageCount > 1000 ? 1 : (app.dummyIMageCount + 1);
             
         });
-            
+        if (productList.length == 0 && app.page == 1) {
+            document.getElementById('noProduct').removeAttribute('hidden');
+        }
         app.hideLoader();
        
         
@@ -175,7 +177,7 @@
 
 
     app.loadNextPage = function(){
-        if (app.totalRecords > app.recordsReceived || app.recordsReceived == 0) {
+        if (app.totalRecords > app.recordsReceived) {
             app.page = (app.page + 1);
             app.getProducts();
         }else{
