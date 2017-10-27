@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    window.scrollTo(0,0);
+    
     //Register Service Worker, to manage cache
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
@@ -13,6 +13,7 @@
     }
 
     var app = {
+        isScrollToTop : false,
         isLoading: true,
         visibleProducts: {},
         page : 1,
@@ -36,7 +37,8 @@
     // Detect when scrolled to bottom.
     
     document.addEventListener('scroll', function() {
-        if (app.page == 1 && app.recordsReceived == 0) {
+        if (app.page == 1 && app.recordsReceived == 0 && !app.isScrollToTop) {
+            app.isScrollToTop = true;
             window.scrollTo(0,0);
         }
         if ((document.documentElement.scrollTop + document.documentElement.clientHeight) >= app.container.clientHeight && app.totalRecords > 0 && app.recordsReceived > 0) {
